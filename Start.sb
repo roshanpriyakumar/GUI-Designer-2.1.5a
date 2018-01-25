@@ -1,0 +1,15 @@
+GraphicsWindow.DrawImage(ImageList.LoadImage(Program.Directory + "\Symbol.png"),100,0)
+GraphicsWindow.Width = 500
+GraphicsWindow.Height = 250
+GraphicsWindow.Title = "GUI Designer"
+b[1] = Controls.AddButton("Start",100,200)
+b[2] = Controls.AddButton("Exit",350,200)
+Controls.ButtonClicked = OnBC
+Sub OnBC
+  If b[1] = Controls.LastClickedButton Then
+    exe = Program.Directory + "\GUI v2.1.5.exe"
+    Process.Start(exe)
+  Else
+    Program.End()	
+  EndIf	
+EndSub	
